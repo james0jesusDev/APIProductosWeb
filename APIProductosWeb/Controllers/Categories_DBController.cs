@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIProductosWeb.Context;
 using APIProductosWeb.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace APIProductosWeb.Controllers
 {
+
+    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class Categories_DBController : ControllerBase
